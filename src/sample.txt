@@ -1,0 +1,22 @@
+    // function handelClick(e){
+    //     const state=e.target.value;
+    //     setDisplay(state)
+    // }
+
+    // useEffect(()=>{
+    //     console.log("Hello this is one ")
+    //   },[])
+      // useEffect(()=>{
+      //   if(count<10000)
+     //   Changecount(prev=>prev+1)
+     // },[count])
+    
+
+    //   useEffect(()=>{
+    //     console.log("Value change ho gaya ",sonu)
+    //     return()=>{
+    //         console.log("Value change hone wala hai ",sonu)
+    //     }
+    //   },[sonu])
+
+      //jab dependency array blank hoga tab mount unmount wala concept ata hai ... nai to to compnent change wala thr=rory laga dega 

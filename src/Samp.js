@@ -32,31 +32,23 @@ const TodoList = () => {
   };
 
   return (
-    <div className='appToDo'>
-      <div className="fixed">
-
-      <h2 style={{color:'black'}}>To-Do List</h2>
+    <div>
+      <h2>To-Do List</h2>
       <input
         type="text"
         value={currentTodo}
         onChange={e => setCurrentTodo(e.target.value)}
         placeholder="Enter a new task"
-        style={{width:'450px'}}
         
-        />
-      <button className='addMe' onClick={addTodo}>Add</button>
-        </div>
-     
-        {todos.length!=0?"":<h1 className='addedText'>Added items will be visible here.</h1>}
-      <ul className='todoItems'>
+      />
+      <button onClick={addTodo}>Add</button>
+      <ul>
         {todos.map(todo => (
-          <div id='todoText' key={todo.id}>
-            <h2>{todo.text}</h2>
-            <div className="buttons">
-              <button onClick={() => deleteTodo(todo.id)}>Delete</button>
-              <button onClick={() => editTodo(todo.id, prompt('Enter new text'))}>Edit</button>
-            </div>
-          </div>
+          <li id='todoText' key={todo.id}>
+            {todo.text}
+            <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+            <button onClick={() => editTodo(todo.id, prompt('Enter new text'))}>Edit</button>
+          </li>
         ))}
       </ul>
     </div>
