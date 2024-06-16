@@ -127,7 +127,7 @@ body {
   }
   .appToDo{
     width: 550px;
-    height: 550px;
+    height: 650px;
     overflow: scroll;
   
   }
@@ -148,8 +148,8 @@ body {
     margin-top: 100px;
   }
 .fixed{
-  margin: 0px;
-  position: fixed;
+  margin-top: 0px;
+  position: absolute;
   background-color: white;
   padding: 12px;
   border-radius: 10px;
@@ -157,7 +157,33 @@ body {
 }
 
 .todoItems{
-  margin-left: 10px;
+  margin-left: -ti10px;
   margin-top: 150px;
 }
+.input{
+  width: 445px !important;
+}
   
+@media (max-width:610px){
+  body{
+    background-color:red;
+  }
+  .input{
+    width: 280px !important;
+  }
+  .todoItems{
+    margin-left: -20px;
+    width: 390px !important;
+  }
+  .addedText{
+    /* margin-left: -200px; */
+    text-align: center;
+    width: 420px;
+    margin-left: -30px;
+  }
+  .fixed{
+    margin-top: -10px;
+  }
+
+
+}

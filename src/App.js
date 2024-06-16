@@ -41,24 +41,25 @@ const TodoList = () => {
         value={currentTodo}
         onChange={e => setCurrentTodo(e.target.value)}
         placeholder="Enter a new task"
-        style={{width:'450px'}}
+        className='input'
         
         />
       <button className='addMe' onClick={addTodo}>Add</button>
         </div>
      
         {todos.length!=0?"":<h1 className='addedText'>Added items will be visible here.</h1>}
-      <ul className='todoItems'>
+      <ol className='todoItems'>
         {todos.map(todo => (
           <div id='todoText' key={todo.id}>
             <h2>{todo.text}</h2>
+            {/* <h4 style={{color:'white',fontSize:'16px',paddingLeft:'8px'}}>{new Date(Date.now()).toLocaleString()}</h4> */}
             <div className="buttons">
               <button onClick={() => deleteTodo(todo.id)}>Delete</button>
               <button onClick={() => editTodo(todo.id, prompt('Enter new text'))}>Edit</button>
             </div>
           </div>
         ))}
-      </ul>
+      </ol>
     </div>
   );
 };
