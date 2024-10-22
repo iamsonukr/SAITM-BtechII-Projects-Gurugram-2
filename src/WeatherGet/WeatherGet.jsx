@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from 'react'
 import axios from 'axios'
 import './weatherGet.css'
+
 const WeatherGet = () => {
     const [weather, setWeather] = useState(null)
     const [city, setCity] = useState('New York')
@@ -22,7 +23,8 @@ const WeatherGet = () => {
 
     return (
         <div className='weather-main'>
-            <h1 className='weather-title' >Weather in {weather?.location?.name}</h1>
+            {/* <h1>Check Weather of your state</h1> */}
+            <h2 className='weather-title' >Weather in {weather?.location?.name}</h2>
             <p className='weather-temp'>Temperature: {weather?.current?.temp_c} °C</p>
             <p className='weather-cond'>Condition: {weather?.current?.condition?.text}</p>
             <input

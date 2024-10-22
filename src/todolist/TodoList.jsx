@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-// import '../App.css'
-import Weather from '../weather/Weather';
+import '../App.css'
+
 
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
@@ -35,8 +35,8 @@ const TodoList = () => {
 
   return (
     <div className='appToDo'>
-      <Weather />
-      {/* <div className="fixed">
+      {/* <Weather /> */}
+      <div className="fixed">
 
         <h2 style={{ color: 'black' }}>To-Do List</h2>
         <input
@@ -48,14 +48,14 @@ const TodoList = () => {
 
         />
         <button className='addMe' onClick={addTodo}>Add</button>
-      </div> */}
+      </div>
 
-      {/* {todos.length != 0 ? "" : <h1 className='addedText'>Added items will be visible here.</h1>} */}
+      {todos.length != 0 ? "" : <h1 className='addedText'>Added items will be visible here.</h1>}
       <ol className='todoItems'>
         {todos.map(todo => (
           <div id='todoText' key={todo.id}>
             <h2>{todo.text}</h2>
-            {/* <h4 style={{color:'white',fontSize:'16px',paddingLeft:'8px'}}>{new Date(Date.now()).toLocaleString()}</h4> */}
+            <h4 style={{color:'white',fontSize:'16px',paddingLeft:'8px'}}>{new Date(Date.now()).toLocaleString()}</h4>
             <div className="buttons">
               <button onClick={() => deleteTodo(todo.id)}>Delete</button>
               <button onClick={() => editTodo(todo.id, prompt('Enter new text'))}>Edit</button>
