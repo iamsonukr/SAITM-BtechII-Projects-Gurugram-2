@@ -1,0 +1,13 @@
+creating env in VITE file
+
+1> Always prefix Vite environment variables with VITE_
+2> Access them using import.meta.env.VITE_VARIABLE_NAME
+3> Make sure your .env file is in the project root directory
+4> Restart your development server after adding environment variables
+
+creating env in REACT file
+
+1> Always prefix Vite environment variables with REACT_APP_
+2> Access them using process.env.REACT_APP_VARIABLE_NAME
+3> Make sure your .env file is in the project root directory
+4> Restart your development server after adding environment variables

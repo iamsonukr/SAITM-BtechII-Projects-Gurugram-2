@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './App.css'; 
+import Weather from './weather/Weather';
 
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
   const [currentTodo, setCurrentTodo] = useState('');
+
 
   const addTodo = () => {
     if (currentTodo !== '') {
@@ -33,6 +35,7 @@ const TodoList = () => {
 
   return (
     <div className='appToDo'>
+    <Weather/>
       <div className="fixed">
 
       <h2 style={{color:'black'}}>To-Do List</h2>
