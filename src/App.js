@@ -6,7 +6,8 @@ const App = () => {
 
   return (
     <div>
-      <WeatherGet/>
+      <TodoList/>
+      {/* <WeatherGet/> */}
           {/* <h1>https://github.com/iamsonukr/TodoExclusiveResponsiveUI</h1> */}
     </div>
   )

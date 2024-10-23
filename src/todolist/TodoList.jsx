@@ -55,7 +55,7 @@ const TodoList = () => {
         {todos.map(todo => (
           <div id='todoText' key={todo.id}>
             <h2>{todo.text}</h2>
-            <h4 style={{color:'white',fontSize:'16px',paddingLeft:'8px'}}>{new Date(Date.now()).toLocaleString()}</h4>
+            {/* <h4 style={{color:'white',fontSize:'16px',paddingLeft:'8px'}}>{new Date(Date.now()).toLocaleString()}</h4> */}
             <div className="buttons">
               <button onClick={() => deleteTodo(todo.id)}>Delete</button>
               <button onClick={() => editTodo(todo.id, prompt('Enter new text'))}>Edit</button>
